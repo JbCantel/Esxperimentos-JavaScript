@@ -1,0 +1,64 @@
+<script>
+    // Classes →
+    class Animal {
+
+        /* Atributos →  são os elementos que definem a estrutura de uma classe.
+         atributos privados → '#' torna o atributo imutável de forma externa.  */
+        #nome = ''
+        #especie = ''
+        #familia
+        #nascimento
+        #peso
+        #metrica = {}
+
+        /* Construtor → O construtor é um método especial para criar 
+            e inicializar um objeto criado a partir de uma classe. */
+        constructor(nome, especie) {
+            /*se refere ao objeto que está sendo referenciado em um 
+            determinado contexto ou escopo. */
+            this.#nome = nome
+            this.#especie = especie
+            document.write('Criando um bicho chamado ' + this.#nome + '<br>')
+        }
+
+        // Métodos →  são "funções" que pertencem a uma classe.
+        alimentacao() { }
+
+        vacinar() { }
+
+        /* Getter → Encapsulamento. A sintaxe de get associa uma propriedade de um objeto a uma função
+         que será chamada quando tal propriedade é acessada. */
+        get nome() {
+            return this.#nome
+        }
+        set nome(nome) {
+            /* Setter → Getters e setters são usados para proteger seus dados,
+             especialmente na criação de classes */
+            this.#nome = nome
+        }
+// get não tem atributos entre os parênteses 
+        get especie () {
+            return this.#especie
+        }
+        // set não tem o "Return"
+        set especie(especie) {
+             this.#especie
+        }
+
+
+
+
+
+    }
+
+    // Objetos →
+    var foca = new Animal('Fofinha', 'mamífero')
+    // esse ↓ "nome" refere-se ao "nome" de SET 
+    //foca.#nome = 'Maria'
+    console.log(foca.nome)
+
+    var formiga = new Animal('Miguinha', 'artrópode')
+    console.log(formiga)
+
+
+</script>
