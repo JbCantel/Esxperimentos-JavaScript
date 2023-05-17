@@ -1,2 +1,2 @@
 # Experimentos
- Adiconar Scripts para experimentos
+ Adicionar Scripts para experimentos
